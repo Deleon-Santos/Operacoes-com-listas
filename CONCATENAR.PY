@@ -24,7 +24,7 @@ def listar(lista_1,lista_2):
     #formatação de lista para estrings formatadas
     hora=[1,2,2025,12,30,20]
 
-    dia, mes, ano = str(hora[0]).zfill(2),str(hora[1]).zfill(2),str(hora[2]).zfill(2)#
+    dia, mes, ano = str(hora[0]).zfill(2),str(hora[1]).zfill(2),str(hora[2]).zfill(2)#o metodos permite acegurar que os elementos possuam 2 digitos na composição
     data_formatada= f'{dia}-{mes}-{ano} '
     print(data_formatada)
 
@@ -33,6 +33,12 @@ def listar(lista_1,lista_2):
     print(hora_formatada)
 
     data_hora_formatada=[data_formatada+hora_formatada]
-    print( data_hora_formatada)
+    print(data_hora_formatada)
+
+    #inserindo valores em indices na lista
+    data_hora_formatada.insert(1,[lista_2,lista_1])
+    print(data_hora_formatada)
+    for indice, elemento in enumerate(data_hora_formatada):
+        print(f"Índice: {indice}, Elemento: {elemento}")
 
 listar(lista_1,lista_2)
